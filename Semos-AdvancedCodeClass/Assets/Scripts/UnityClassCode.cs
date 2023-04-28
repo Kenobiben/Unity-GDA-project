@@ -89,20 +89,27 @@ public class UnityClassCode : MonoBehaviour
         //    Debug.Log("biggest " + bigElm);
         //    Debug.Log("smallest " + smallElm);
 
-        // { (1*1*1), (2*2*2), (3*3*3), (4*4*4), (5*5*5) } | 1, 8,,, .. 125
+        //{ (1 * 1 * 1), (2 * 2 * 2), (3 * 3 * 3), (4 * 4 * 4), (5 * 5 * 5) } | 1, 8,,, ..125
+
         //int[] array = new int[5];
-        //for (int i = 1; i < array.Length; i++)
+        //for (int i = 1; i < array.Length; i++) // dpdeluvanje vrednosti na nizata
         //{
         //    array[i] = i * i * i;
         //}
+        //int[] array = new int[5];
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    array[i] = (i + 5) * (i + 5) * (i + 5);
+        //}
 
-        //for ( int i = 0; i < array.Length; i++)
+
+        //// pecatenje na niza
+        //for (int i = 0; i < array.Length; i++)
         //{
         //    Debug.Log(array[i]);
         //}
 
 
-        // End
 
 
 
