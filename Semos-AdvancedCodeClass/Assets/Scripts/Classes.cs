@@ -15,7 +15,7 @@ public class Classes : MonoBehaviour
     {
         // kreirajte instanca od taa klasa
 
-        int num = 5;
+        
         Person person = new Person(); // kreirawe na objekt ili istanca na klasa 
         // inicijalizirajte gi ovde za objektot person 
         person.name = "Pero";
