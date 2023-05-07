@@ -10,23 +10,23 @@ public class Enemy : MonoBehaviour
   
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            Move(false); 
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            Move(true);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            Rotate(true);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            Rotate(false);
-        }
+        Move();
+        //if (Input.GetKey(KeyCode.UpArrow))
+        //{
+        //    Move(false); 
+        //}
+        //else if (Input.GetKey(KeyCode.DownArrow))
+        //{
+        //    Move(true);
+        //}
+        //else if (Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    Rotate(true);
+        //}
+        //else if (Input.GetKey(KeyCode.LeftArrow))
+        //{
+        //    Rotate(false);
+        //}
 
 
         //transform.Translate(-Vector3.forward * speed * Time.deltaTime); // neame uceno ova
@@ -37,10 +37,10 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void Move(bool moveforwoard)
+    public virtual void Move()
     {
         Vector3 position = transform.position;
-        position.z -= (moveforwoard ? -1 : 1)* speed * Time.deltaTime;
+        position.z -= speed * Time.deltaTime;
         transform.position = position;
     }
 
@@ -54,3 +54,23 @@ public class Enemy : MonoBehaviour
     // kodot so dvizenje stavete go vo funkicja move
 
 }
+
+
+
+
+
+
+
+
+
+
+// vtor del od parcijalna klasa
+//partial class PartialClassTest
+//{
+//    public int pt3;
+
+//    public void Test()
+//    {
+
+//    }
+//}

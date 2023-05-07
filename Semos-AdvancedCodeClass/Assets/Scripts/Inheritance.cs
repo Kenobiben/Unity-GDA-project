@@ -19,6 +19,14 @@ public class Inheritance : MonoBehaviour
         //child2.height = 25;
         //child2.school = "Ekonomsko";
         // child2.gender = "masko";
+
+        // koga rabotime so abstract klasa, od nea ne mozeme da kreirame instanci/objekti
+        //AbstractRoditel abstractParent = new AbstractRoditel(); //-- ova ne funkcionira 
+        //DeteOdAbstractRoditel deteOdAvstractRoditel = new DeteOdAbstractRoditel();
+        //deteOdAvstractRoditel.Learn(); 
+
+        //PartialClassTest pct = new PartialClassTest();
+        //pct.Test();
         
     } 
 
@@ -101,5 +109,56 @@ class Dete : Roditel // dete koja nasleduva od klasata Roditel
 
 abstract class AbstractRoditel
 {
+    public string skinColor;
+    public string eyeColor;
+
+    public virtual void Jump() // virtual e zbor koj ja prezapisuva funkcijata
+    {
+        Debug.Log("Roditel : Jump");
+    }
+
+    public abstract void Learn(); // abstractni funkcii nemaat nikakva implementacija
+    // nivnata implementacija treba da bide vo dete klasata
+   
+
+    
+}
+
+class DeteOdAbstractRoditel : AbstractRoditel
+{
+    public override void Learn()
+    {
+        //base.Learn();// ne e vozmosno da se povika base abstract funkcija
+        Debug.Log("Learning");
+    }
+
+    public override void Jump()
+    {
+        base.Jump();
+    }
+
 
 }
+
+class A // po default ovaa klasa nasleduva od objeck klasa od C#
+{ 
+
+}
+
+
+// klasa od koja e zabraneto da se nasleduva
+
+//sealed class ZabranetoNasleduvanje
+//{
+
+//}
+
+//class Test : ZabranetoNasleduvanje // ni dava greska, sealed klasa ne moze da ja povikas
+//{
+
+//}
+//partial class PartialClassTest
+//{
+//    public int pt1;
+//    public string pt2;
+//}
