@@ -27,7 +27,10 @@ public class Inheritance : MonoBehaviour
 
         //PartialClassTest pct = new PartialClassTest();
         //pct.Test();
-        
+        Roditel roditel = new Dete();//
+        roditel.SetSkinColor("dark");
+        //roditel.Test();
+
     } 
 
 
@@ -91,7 +94,7 @@ class Dete : Roditel // dete koja nasleduva od klasata Roditel
 
     }
 
-    private void Test()
+    public void Test()
     {
         gender = "Male"; 
     }

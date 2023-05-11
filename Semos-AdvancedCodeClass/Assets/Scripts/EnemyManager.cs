@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
+    //[SerializeField]
+    //private TelleportEnemy tpEnemy;
+    //[SerializeField]
+    //private BlinkinEnemy blinkEnemy;
+    //[SerializeField]
+    //private ScalingEnemy scalingEnemy;
     [SerializeField]
-    private TelleportEnemy tpEnemy;
-    [SerializeField]
-    private BlinkinEnemy blinkEnemy;
+    private BaseEnemy[] enemies;
 
     public bool gameStart = false; // bool e sekogas false 
 
@@ -17,8 +21,13 @@ public class GameManager : MonoBehaviour
     {
         if (gameStart)
         {
-            tpEnemy.Move();
-            blinkEnemy.Move();
+            //tpEnemy.Move();
+            //blinkEnemy.Move();
+            //scalingEnemy.Move();
+            for ( int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].Move(); // za sekoj enemy move - optimiziran
+            }
            
         }
 

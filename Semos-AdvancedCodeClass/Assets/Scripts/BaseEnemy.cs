@@ -15,6 +15,7 @@ public abstract class BaseEnemy : MonoBehaviour
     [SerializeField]
     protected float jumpForce = 1;
 
+
     public void Move() // dvizenje
     { 
         Vector3 position = transform.position;
