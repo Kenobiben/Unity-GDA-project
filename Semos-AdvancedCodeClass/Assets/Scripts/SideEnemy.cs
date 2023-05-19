@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTwo : Enemy
+public class SideEnemy : Enemy
 {
     
     // ovde da napravite overide na fukncija move i za side enemy da implementirate logika na dvizenje od sprotivna strana

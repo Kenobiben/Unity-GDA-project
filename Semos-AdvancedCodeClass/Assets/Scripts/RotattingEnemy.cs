@@ -10,7 +10,7 @@ public class RotattingEnemy : BlinkinEnemy
     void Update()
     {
         Vector3 rotation = transform.eulerAngles;
-        rotation.y += 0.0f;
+        rotation.y += 0.01f;
         transform.eulerAngles = rotation;
 
     }

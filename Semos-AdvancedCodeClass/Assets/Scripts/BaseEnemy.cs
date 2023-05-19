@@ -11,17 +11,28 @@ public abstract class BaseEnemy : MonoBehaviour
     [SerializeField]
     private int health = 100;
     [SerializeField]
-    protected Rigidbody rb; // protected moze da zastiti i da vlece fajl vo druga skripta
-    [SerializeField]
     protected float jumpForce = 1;
+    [SerializeField]
+    protected Rigidbody rb; // protected moze da zastiti i da vlece fajl vo druga skripta
 
 
-    public void Move() // dvizenje
-    { 
+
+
+    public virtual void Move(Vector3 targetPosition) // dvizenje
+    {
+        //Vector3 position = transform.position;
+        //position.z -= speed * Time.deltaTime;
+        //   transform.position = position;
+
+        //logika so ke go dvizi ovoj enemy objekt kon pozicija moveTowards
         Vector3 position = transform.position;
-        position.z -= speed * Time.deltaTime;
-           transform.position = position;
-     }
+        position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * speed);
+        transform.position = position;
+
+
+        //Vector3.Distance(); // funkcija koja vrakja rastojanie pomegju dva objekti 
+
+    }
 
     public virtual void Jump()
     {
